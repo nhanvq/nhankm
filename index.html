@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Diary - Lưu giữ kỷ niệm tình yêu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>❤️ Nhật ký tình yêu</h1>
+        <button class="add-btn" id="addBtn">
+            <i class="fas fa-plus"></i> Thêm kỷ niệm
+        </button>
+    </header>
+
+    <!-- Form thêm entry (ẩn) -->
+    <div class="form-popup" id="entryForm">
+        <form class="form-container">
+            <h2>💌 Kỷ niệm mới</h2>
+            
+            <div class="upload-area" id="uploadBox">
+                <input type="file" id="imageInput" accept="image/*" hidden>
+                <label for="imageInput" class="upload-label">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Nhấn để tải ảnh</p>
+                </label>
+                <img id="previewImage" class="preview">
+            </div>
+
+            <textarea id="message" placeholder="Viết lời nhắn của anh ấy..."></textarea>
+            
+            <div class="form-btns">
+                <button type="button" class="btn cancel" id="cancelBtn">Đóng</button>
+                <button type="submit" class="btn save">Lưu lại</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Hiển thị các entry -->
+    <div class="entries-grid" id="entriesGrid"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
